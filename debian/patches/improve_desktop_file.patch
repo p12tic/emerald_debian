@@ -1,0 +1,26 @@
+diff -Nur new/misc/emerald-theme-manager.desktop new.new/misc/emerald-theme-manager.desktop
+--- new/misc/emerald-theme-manager.desktop	2008-02-02 13:15:58.000000000 +0100
++++ new.new/misc/emerald-theme-manager.desktop	2008-02-02 13:59:45.000000000 +0100
+@@ -1,14 +1,17 @@
+ [Desktop Entry]
+-Encoding=UTF-8
++Type=Application
+ Name=Emerald Theme Manager
++Name[ca]=Gestor de temes de l'Emerald
++Name[de]=Emerald Motiv Manager
++Name[es]=Gestor de temas del Emerald
+ Name[fr]=Gestionnaire de thèmes Emerald
+ Comment=Configure Emerald themes
++Comment[ca]=Configureu els temes de l'Emerald
++Comment[de]=Konfiguriert Emerald Motive
++Comment[es]=Configura los temas del Emerald
+ Comment[fr]=Configurerer les options des thèmes Emerald
+-Icon=/usr/share/pixmaps/emerald-theme-manager-icon.png
++Icon=emerald-theme-manager-icon
+ Exec=emerald-theme-manager
+ Terminal=false
+-Type=Application
+ Categories=Settings;
+-Exec=emerald-theme-manager -i 
+ MimeType=application/x-emerald-theme;
+-

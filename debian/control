@@ -1,0 +1,37 @@
+Source: emerald
+Section: x11
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Nicholas Thomas <lupine@beryl-project.org>
+Build-Depends: debhelper (>= 5), cdbs, 
+ compiz-dev (>= 1:0.7.2), libgtk2.0-dev,
+ libpango1.0-dev, libwnck-dev,  libxml-parser-perl, 
+ libdecoration0-dev
+Standards-Version: 3.8.4
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-dev/emerald/ubuntu
+Vcs-Browser: https://code.launchpad.net/~ubuntu-dev/emerald/ubuntu
+
+Package: emerald
+Architecture: any
+Depends: compiz-plugins, libdecoration0, ${shlibs:Depends}, ${misc:Depends}
+Conflicts: gcompizthemer, cgwd
+Replaces: gcompizthemer, cgwd
+Provides: gcompizthemer, cgwd
+Recommends: emerald-themes
+Description: Decorator for compiz-fusion
+ This package provides a decorator for compiz-fusion and a themer application
+
+Package: libemeraldengine0
+Architecture: any
+Section: libs
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Decoration engines for compiz-fusion
+ This package provides some engines for drawing decoration on compiz-fusion
+
+Package: libemeraldengine-dev
+Architecture: any
+Section: libdevel
+Depends: ${shlibs:Depends}, ${misc:Depends}, libemeraldengine0 (=${binary:Version})
+Description: Development files for emerald engines
+ This package contains the headers and development files needed to
+ build engines for emerald.

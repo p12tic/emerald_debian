@@ -1,0 +1,25 @@
+Description: GTK_OBJECT_TYPE_NAME() is deprecated, use G_OBJECT_TYPE_NAME()
+ instead.
+Author: Ilya Barygin <barygin@gmail.com>
+
+diff -Nur -x '*.orig' -x '*~' emerald-0.7.2/libengine/themer.c emerald-0.7.2.new/libengine/themer.c
+--- emerald-0.7.2/libengine/themer.c	2008-03-06 22:37:28.000000000 +0300
++++ emerald-0.7.2.new/libengine/themer.c	2010-02-18 23:00:24.000000000 +0300
+@@ -461,7 +461,7 @@
+ }
+ gdouble get_float(SettingItem * item)
+ {
+-    if(!strcmp(GTK_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
++    if(!strcmp(G_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
+          return gtk_spin_button_get_value((GtkSpinButton *)item->widget);
+     }
+     else {
+@@ -647,7 +647,7 @@
+ }
+ void set_float(SettingItem * item, gdouble f)
+ {
+-    if(!strcmp(GTK_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
++    if(!strcmp(G_OBJECT_TYPE_NAME(item->widget),"GtkSpinButton")) {
+          gtk_spin_button_set_value((GtkSpinButton *)item->widget, f);
+     } 
+     else {

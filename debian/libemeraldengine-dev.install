@@ -1,0 +1,6 @@
+usr/lib/libemeraldengine.a
+usr/lib/libemeraldengine.la
+usr/lib/libemeraldengine.so
+usr/lib/emerald/engines/*.a
+usr/lib/emerald/engines/*.la
+usr/include/emerald/*.h

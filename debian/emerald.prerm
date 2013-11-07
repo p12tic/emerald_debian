@@ -1,0 +1,8 @@
+#!/bin/sh
+set -e
+
+update-alternatives --remove x-window-decorator /usr/bin/emerald
+
+#DEBHELPER#
+
+exit 0
